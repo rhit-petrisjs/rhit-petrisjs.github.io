@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Sanchez&display=swap');
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+
+    --light-color: #305578;
+    --body-color: #36454F;
+    --heading-color: #89E7FF;
+    --contrast-color: #0C80EB;
+}
+
+
 body#about img {
     height: 15em;
 }
@@ -10,22 +22,58 @@ body {
     /* padding-left: 4em; */
     font-size: 18px;
     line-height: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+    color: var(--body-color);
 }
+
+main{
+    color: var(--light-color)
+}
+
+header h1, nav, nav a {
+    color: var(--light-color);
+}
+
 h1, h2, h3{
     line-height: 1.2em;
+    font-family: 'Sanchez', serif;
+    color: var(--heading-color);
+}
+
+a{
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover{
+    color: var(--contrast-color)
 }
 
 body {
     display: grid;
     grid-template-areas: "head head"
+                         "nav nav"
                          "main main"
                          "foot foot";
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto 1fr auto;   
+    grid-template-rows: auto auto 1fr auto;   
+}
+
+@media screen and (min-width: 25em){
+    body{
+        grid-template-areas: "head head"
+                         "nav main"
+                         "foot foot";
+        grid-template-rows: auto 1fr auto;   
+                 
+    }
+    
 }
 
 body > *{
-    padding-left: 4rem;
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
 }
 
 body > header{
@@ -53,11 +101,30 @@ body > footer{
 }
 
 header, footer{
-    padding-top: 1.33rem;
-    padding-bottom: 1.33rem;
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
 
 }
 
 header h1, footer h1{
     margin: 0;
+}
+
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+@media screen and (min-width: 25em){
+    body#portfolio ul#portfolioItems li{
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#portfolioItems li img{
+    max-width: 100%;
 }
