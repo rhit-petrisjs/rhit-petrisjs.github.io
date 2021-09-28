@@ -184,6 +184,11 @@ body#portfolio img {
     margin-left: -0.66em;
 }
 
+#topButton{
+    background-color: var(--contrast-color);
+    color: white;
+}
+
 /* body#portfolio ul#portfolioItems li img{
     max-width: 100%;
 } */
