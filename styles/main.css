@@ -15,7 +15,7 @@ body#about img {
     height: 15em;
     display: inline;
     margin-right: var(--horizontal-space);
-    border: 3px solid var(--contrast-color);
+    border: 3px solid var(--heading-color);
     box-shadow: 7px 8px 7px -1px rgba(0,0,0,0.64);
 }
 
@@ -37,15 +37,28 @@ main{
     color: var(--light-color)
 }
 
-header h1, nav, nav a {
+/* header h1, nav, nav a {
     color: var(--light-color);
-}
+} */
 
 h1, h2, h3{
     line-height: 1.2em;
     font-family: 'Sanchez', serif;
+}
+
+header h1{
+    color: var(--light-color);
+}
+
+h1{
+    color: var(--subheading-color);
+}
+
+h2 h3{
     color: var(--heading-color);
 }
+
+
 
 a{
     color: var(--body-color);
@@ -163,6 +176,14 @@ body#portfolio ul#portfolioItems{
     }
 }
 
-body#portfolio ul#portfolioItems li img{
-    max-width: 100%;
+body#portfolio img {
+    height: 10em;
+    display: inline;
+    border: 3px solid var(--heading-color);
+    /* max-width: 100%; */
+    margin-left: -0.66em;
 }
+
+/* body#portfolio ul#portfolioItems li img{
+    max-width: 100%;
+} */
